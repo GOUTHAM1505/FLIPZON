@@ -9,7 +9,7 @@ include("includes/db.php");
 <head>
 <title>FLIPZON</title>
 
-<link rel="stylesheet" href="styles/style.css" media="all" />
+<link rel="stylesheet" href="styles/style1.css" media="all" />
 </head>
 
 <body>
@@ -79,38 +79,13 @@ include("includes/db.php");
 	<div id="content_area">
 		<div id="products_box">
 
-			<?php
-			$get_pro = " select * from products order by RAND() LIMIT 0,6";
+			<?php getPro(); ?>
 
-			$run_pro = mysqli_query($con, $get_pro);
+			<?php get_pro_by_cat_id(); ?>
 
-			while($row_pro = mysqli_fetch_array($run_pro)){
-				$pro_id = $row_pro['product_id'];
-				$pro_cat = $row_pro['product_cat'];
-				$pro_brand = $row_pro['product_brand'];
-				$pro_title = $row_pro['product_title'];
-				$pro_price = $row_pro['product_price'];
-				$pro_image = $row_pro['product_image'];
+			<?php get_brand_by_brand_id(); ?>
 
-				echo "
-					<div id='single_product'>
-						<h3>$pro_title</h3>
-						<img src='admin_area/product_images/$pro_image' width='180' height='180' />
-
-						<p><b> Price: $ $pro_price </b></p>
-
-						<a href='details.php?pro_id=$pro_id'>Details</a>
-
-						<a href='index.php?add_cart=$pro_id'>
-							<button style='float:right'>Add to Cart</button>
-						</a>
-
-					</div>
-				";
-			}
-			?>
-
-		</div>
+		</div><!-- /#products_box  -->
 	</div>
 
 	</div><!-- /.content_wrapper-->
