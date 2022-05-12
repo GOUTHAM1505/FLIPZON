@@ -65,7 +65,7 @@ width:150px;
 }
 
 #form input[type=text]{
-    width:80%;
+    width:75%;
 }
 .cart{
 float:left;
@@ -237,7 +237,6 @@ border-radius:1.5px;
 }
 #single_product img{
     border:2px solid black;
-    
 }
 #footer{
     width:1000px;
