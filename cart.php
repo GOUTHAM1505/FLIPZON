@@ -32,16 +32,49 @@
 
 	<div id="content_area">
 
-	<?php
-	cart();
-	?>
+        <div class="shopping_cart_container">
+
+        <div id="shopping_cart" align="right" style="padding:15px">
+            <?php
+
+                if(isset($_SESSION['customer_email'])){
+                    echo "<b>Your Email:</b>" . $_SESSION['customer_email'];
+                }
+                else{
+                    echo " ";
+                }
+            ?>
+            <b style="color:navy"> Your Cart -</b> Total Items: <?php total_items() ; ?> Total Price: <?php total_price();?>
+        </div>
+        <form action="" method="post" enctype="multipart/form-data">
+        <table align="center" width="100%">
+            <tr align="center">
+                <th>Remove</th>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+
+            <tr align="center">
+                <td><input type="checkbox" name="remove[]" value="" /></td>
+                <td>Product Title</td>
+                <td><input type="text" size="4" name="qty" value="" /></td>
+                <td>Price</td>
+            </tr>
+
+            <tr align="center">
+                <td colspan="2"><input type="submit" name="update_cart" value="Update Cart" /></td>
+                <td><input type="submit" name="continue" value="Continue Shopping" /></td>
+                <td><button><a href="checkout.php" style="text-decoration:none;color:black;">Checkout</a></td>
+            </tr>
+        </table>
+        </form>
+
+        </div><!--shopping_cart_container -->
+
 		<div id="products_box">
 
-			<?php getPro(); ?>
-
-			<?php get_pro_by_cat_id(); ?>
-
-			<?php get_brand_by_brand_id(); ?>
+			
 
 		</div><!-- /#products_box  -->
 	</div>
