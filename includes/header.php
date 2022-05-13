@@ -37,6 +37,11 @@ include("includes/db.php");
 			<li class="dropdown_header_cart">
 				<div id="notification_total_art" class="shopping-cart">
 					<img src="images/cart_icon.png" id="cart_image" height="50px" >
+                    <div class="noti_cart_number">
+                        <?php
+                        total_items();
+                        ?>
+                    </div>
 				</div>
 			</li>	
 		</ul>

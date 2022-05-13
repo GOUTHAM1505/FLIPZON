@@ -92,6 +92,15 @@ position:relative;
 width:auto;
 z-index:1;
 }
+
+.cart.noti_cart_number{
+    background:red;
+    color:white;
+    position:absolute;
+    top:-5px;
+    left:25px;
+    padding:1px 3px 1px 3px;
+}
 .content_wrapper{
     width:1000px;
     margin:auto;
