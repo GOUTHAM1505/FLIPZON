@@ -1,27 +1,23 @@
-<?php include('includes/db.php');?>
+<div class="form_box">
 
-<html>
-    <head>
-        <title>Inserting Product</title>
-    </head>
+    <form action="" method="post" enctype="multipart/form-data">
 
-    <body bgcolor="skyblue">
+        <table align="center" width="100%">
 
-    <form action="insert_product.php" method="post" enctype="multipart/form-data">
-
-        <table align="center" width="795" border="2" bgcolor="#187eae">
-
-            <tr align="center">
-                <td colspan="7"><h2>Insert New Post Here</h2></td>
+            <tr>
+                <td colspan="7">
+                    <h2>Add Product</h2>
+                    <div class="border_bottom"></div><!--/.border_bottom -->
+                </td>
             </tr>
 
             <tr>
-                <td align="right"><b>Product Title:</b></td>
+                <td><b>Product Title:</b></td>
                 <td><input type="text" name="product_title" size="60" required/></td>
             </tr>
 
             <tr>
-                <td align="right"><b>Product Category:</b></td>
+                <td><b>Product Category:</b></td>
                 <td>
                     <select name="product_cat">
                         <option>Select a Category</option>
@@ -46,7 +42,7 @@
             </tr>
 
             <tr>
-                <td align="right"><b>Product Brand:</b></td>
+                <td><b>Product Brand:</b></td>
                 <td>
                     <select name="product_brand">
                         <option>Select a Brand</option>
@@ -69,33 +65,32 @@
             </tr>
 
             <tr>
-                <td align="right"><b>Product Image: </b></td>
+                <td><b>Product Image: </b></td>
                 <td><input type="file" name="product_image" /></td>
             </tr>
 
             <tr>
-                <td align="right"><b>Product Price: </b></td>
+                <td><b>Product Price: </b></td>
                 <td><input type="text" name="product_price" required/></td>
             </tr>
 
             <tr>
-                <td align="right"><b>Product Description: </b></td>
-                <td><textarea name="product_desc" cols="20" rows="10"></textarea></td>
+                <td valign="top"><b>Product Description: </b></td>
+                <td><textarea name="product_desc" rows="10"></textarea></td>
             </tr>
 
             <tr>
-                <td align="right"><b>Product Keywords: </b></td>
+                <td><b>Product Keywords: </b></td>
                 <td><input type="text" name="product_keywords" required/></td>
             </tr>
 
-            <tr align="center">
-                <td colspan="7"><input type="submit" name="insert_post" value="Insert Product Now"/></td>
+            <tr>
+                <td></td>
+                <td colspan="7"><input type="submit" name="insert_post" value="Add Product"/></td>
             </tr>
         </table>
     </form>
-    </body>
-</html>
-
+</div><!--/.form_box -->
 <?php
 if(isset($_POST['insert_post'])){
     $product_title=$_POST['product_title'];

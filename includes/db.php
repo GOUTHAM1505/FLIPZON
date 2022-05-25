@@ -1,8 +1,10 @@
 
 <?php
-$con = mysqli_connect("localhost","root","","ecommerce_dbms");
+$con = mysqli_connect("localhost","root","","flipzon");
 
-/*if(mysqli_connect_errno()){
+if(mysqli_connect_errno()){
     echo "Failed to connect to MySQL: " . mysqli_connect_error();
-}else{"MySQL has succesfully connected"}*/
+}
+mysqli_query($con,"SET NAMES 'utf8' ");
+
 ?>

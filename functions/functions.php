@@ -1,7 +1,7 @@
 
 
 <?php 
-$con = mysqli_connect("localhost","root","","ecommerce_dbms");
+$con = mysqli_connect("localhost","root","","flipzon");
 
 if(mysqli_connect_errno()){
     echo "The connection was not established: " . mysqli_connect_error();
@@ -25,7 +25,7 @@ function cart(){
 			$pro_title = $fetch_pro['product_title'];
 
 			$run_insert_pro = mysqli_query($con,"insert into cart (product_id,product_title,ip_address) values ('$product_id','$pro_title','$ip')");
-			
+			echo "<script>window.open('index.php','_self')</script>";
 		}
 	}
 }

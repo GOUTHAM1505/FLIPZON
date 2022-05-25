@@ -54,7 +54,7 @@
                 <th>Quantity</th>
                 <th>Price</th>
             </tr>
-
+            
             <tr align="center">
                 <td><input type="checkbox" name="remove[]" value="" /></td>
                 <td>Product Title</td>
