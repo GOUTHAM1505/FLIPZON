@@ -86,7 +86,7 @@ $fetch_user = mysqli_fetch_array($select_user);
 
 <?php 
     if(isset($_POST['edit_profile'])){
-       if($_POST['name']!=''&& $_POST['edit_country']!='' &&  $_POST['city']!='' &&  $_POST['contact']!='' && $_POST['address']!='';){
+       if($_POST['name']!=''&& $_POST['edit_country']!='' &&  $_POST['city']!='' &&  $_POST['contact']!='' && $_POST['address']!=''){
            
            $name = $_POST['name'];
            
